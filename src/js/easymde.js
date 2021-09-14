@@ -1,5 +1,5 @@
 'use strict';
-var CodeMirror = require('codemirror');
+var CodeMirror = window.CodeMirror || require('codemirror');
 require('codemirror/addon/edit/continuelist.js');
 require('./codemirror/tablist');
 require('codemirror/addon/display/fullscreen.js');
@@ -2593,4 +2593,5 @@ EasyMDE.prototype.toTextArea = function () {
     }
 };
 
+EasyMDE.CodeMirror = CodeMirror;
 module.exports = EasyMDE;
